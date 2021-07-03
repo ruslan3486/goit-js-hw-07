@@ -5,8 +5,8 @@ const spanEl = document.querySelector('#name-output');
 
 function onInputChange() {
     
-    return (spanEl.textContent = input.value) 
-     
+    return input.value === '' ? spanEl.textContent = 'незнакомец' : spanEl.textContent = input.value;
+    
 }
 
 input.addEventListener('input', onInputChange)

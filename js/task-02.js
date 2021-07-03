@@ -7,12 +7,14 @@ const ingredients = [
   'Приправы',
 ];
 
-const ul = document.querySelector('#ingredients')
 
-const ItemArray = ingredients.map(ingredient => {
-const item = document.createElement('li')
-    item.textContent = ingredient
-    ul.append(item)
-})
+const ul = document.querySelector('ul#ingredients');
+const insertListItems = items => {
+  const ingredientEl = document.createElement('li');
+  ingredientEl.textContent = items;
+  return ingredientEl;
+};
 
+const allArray = ingredients.map(items => insertListItems(items));
+ul.append(...allArray);
 console.log(ul)

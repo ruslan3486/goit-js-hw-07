@@ -17,7 +17,7 @@ const images = [
 
 
 const imageEl = ({ url, alt }) =>
-    `<li><img src="${url}" alt="${alt} width = 200, height = 150" /></li>`;
+    `<li><img src=${url} alt=${alt} /></li>`;
 
 const galleryMarkup = images.reduce((acc, item) => acc + imageEl(item), '');
 const galleryList = document.querySelector('#gallery');
